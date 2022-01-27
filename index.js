@@ -9,21 +9,8 @@ const Reviews = require('./models/Reviews');
 const fileUpload = require('express-fileupload');
 const path = require('path');
 const FloorPlan = require('./models/FloorPlan');
-const {auth, requiresAuth} = require('express-openid-connect');
-
 
 require('dotenv').config();
-
-app.use(
-    auth({
-        authRequired: false,
-        auth0Logout: true,
-        issuerBaseURL: process.env.ISSUER_BASE_URL,
-        baseURL: process.env.BASE_URL,
-        clientID: process.env.CLIENT_ID,
-        secret: process.env.SECRET
-    })
-);
 
 // DB Connection
 mongoose.connect(process.env.DB_URL, {
