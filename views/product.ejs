@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="container mt-5 mb-5 p-3">
+    <h1 class="display-4">Yard Sale</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/products">Yard Sales Home Page</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><%= product.title %></li>
+        </ol>
+      </nav>
+      <hr>
+
+    <div class="row row-cols cols-8 mx-auto py-3 me-2 d-flex">
+        <h1><%= product.title %></h1>
+        <p class="lead">
+            <%= product.description %> <br>
+            <%= product.sizes %> <br>
+            <%= product.price %> <br>
+            <%= product.contact %>
+        </p>
+        <p>
+          <%= product.datePosted.toDateString() %>
+        </p>
+    </div>
+
+</div>
+
+<%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>

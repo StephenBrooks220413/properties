@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="container mt-5 mb-5 p-3">
+    <h1 class="display-4">Apartments Info</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/apartments">Apartments</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><%= apartment.type %></li>
+        </ol>
+      </nav>
+      <hr>
+
+    <div class="row">
+        <div class="col-md mb-2 p-4">
+          <h1><%= apartment.type %></h1>
+          <p class="lead">
+              <%= apartment.description %> <br>
+              <%= apartment.sizes %> <br>
+              <%= apartment.price %> <br>
+              <%= apartment.contact %>
+          </p>
+          <p>
+            <%= apartment.datePosted.toDateString() %>
+          </p>
+        </div>
+        <div class="col-md mb-2 p-4">
+          <img src="<%= apartment.image %>" class="img-fluid shadow-2-strong rounded" alt="<%= apartment.type %>">
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>

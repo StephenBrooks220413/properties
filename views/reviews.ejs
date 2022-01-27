@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="reviews-bg"></div>
+
+<div class="container mt-5 mb-5 p-3">
+    <h1 class="display-4">Customer Reviews</h1>
+
+    <% for(var i = 0; i < reviews.length; i++){ %> 
+        <i class="fas icon-full fa-grin-stars"></i>
+        <i class="fas icon-full fa-grin-stars"></i>
+        <i class="fas icon-full fa-grin-stars"></i>
+        <i class="fas icon-full fa-grin-stars"></i>
+        <i class="far icon-half fa-grin-stars"></i>
+        <div class="row row-cols cols-8 mx-auto py-3 me-2 d-flex">
+                <h1><%= reviews[i].title %></h1>
+                <p class="lead">
+                    <%= reviews[i].description %>
+                </p>
+                <p>
+                    <%= reviews[i].email %>
+                </p>
+        </div>
+    <% } %>
+
+</div>
+
+<%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>

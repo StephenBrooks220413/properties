@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="container mt-5 mb-5 text-start p-3">
+    <h1 class="display-5">Write Review</h1>
+    <p class="lead text-success">
+        Had a good experience? Share with Us!!!
+    </p>
+
+    <form action="/review/store" method="post">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="title" required name="title" class="form-control" />
+          <label class="form-label" for="title">Title</label>
+        </div>
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="email" name="email" class="form-control" />
+          <label class="form-label" for="email">Email address</label>
+        </div>
+      
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" required id="description" name="description" rows="4"></textarea>
+          <label class="form-label" for="description">Message</label>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+      </form>
+
+</div>
+
+<%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>

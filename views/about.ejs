@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="about-bg">
+    <div class="text-center text-white">
+        <h1 class="display-2 animate__animated animate__fadeInDown">Our Movement</h1>
+        <h3 class="display-5 animate__animated animate__fadeInRight">
+            Your Place To Live
+        </h3>
+        <hr class="line" />
+    </div>
+    <br />
+    <div class="container">
+        <div class="row text-center mt-5 mb-5">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-white mb-3">
+                <h3>About DevPoperties</h3>
+                <p>
+                    We're the only place you want to call home. We're
+                    minutes away from shopping centers, 12 minutes from
+                    nearest E.R. We have several properties and at the
+                    most ideal locations for families. Schedule a visit
+                    to see one or our properties nearest to you.
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                <img src="/img/about.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 mb-5 text-center">
+    <h2>Let's schedule some time together...</h2>
+    <img src="https://www.senecahs.org/vimages/shared/vnews/stories/5dade1e074975/1_Cal.jpeg"
+         class="img-thumbnail shadow-3-strong rounded-2"
+         style="height: 220px; width: 300px;"
+         alt="about image">
+    <form action="/schedule/store" method="post">
+        <center>
+            <input type="datetime-local" style="width: 240px" class="form-control m-2" id="date" name="date" />
+            <input type="time" style="width: 240px" class="form-control m-2" id="time" name="time" />
+            <input type="email" placeholder="You Email" style="width: 240px" class="form-control m-2" id="email" name="email">
+        </center>
+        <button type="submit" href="#!" class="btn btn-outline-dark">Schedule</button>
+    </form>
+</div>
+
+<%- include('layouts/footer') %>
+
+</body>
+<%- include('layouts/scripts') %>
+</html>

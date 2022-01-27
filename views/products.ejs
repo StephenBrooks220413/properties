@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+<%- include('layouts/navBar') %>
+
+<div class="container mt-5 mb-5 p-3">
+    <h1 class="display-4 mb-5">Yard Sales</h1>
+    <div class="row text-center">
+        <% for(var i = 0; i < products.length; i++){ %> 
+        <div class="col-md-3 col-sm-12 hover-zoom">
+            <a href="/product/<%= products[i]._id %>">
+                <img src="<%= products[i].image %>" class="img-fluid" alt="<%= products[i].title %>">
+            </a>
+            <p>
+                <%= products[i].contact %>
+            </p>
+        </div>
+        <% } %>
+    </div>
+
+</div>
+
+<%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>

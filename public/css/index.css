@@ -1,0 +1,50 @@
+.home-intro-bg {
+    background: url('../img/home-intro.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 230px;
+  padding-bottom: 230px;
+}
+
+.about-bg {
+  background-image: linear-gradient(to bottom, #22313F, #FFFFFF);
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+}
+.reviews-bg {
+  background: url('https://www.lumina-intelligence.com/wp-content/uploads/2019/05/GettyImages-1074272374-thegem-blog-default.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30vh;
+}
+
+.apartments-bg {
+  background: url('https://images.squarespace-cdn.com/content/v1/5963a269725e254e506f7909/1505103220634-EQ5X6QHQA2YAGUZ015R0/Property+management+office+san+francisco.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 30vh;
+}
+
+
+.icon-full {
+  font-size: 22px;
+  color: rgb(62, 204, 240);
+}
+
+.icon-half {
+  font-size: 22px;
+  color: rgb(182, 176, 176);
+}
+
+.line {
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}

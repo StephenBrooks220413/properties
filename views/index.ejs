@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') %>
+<body>
+    <%- include('layouts/navBar') %>
+
+    <div class="home-intro-bg">
+        <div class="container text-white">
+            <h1 class="display-4">DevProperties</h1>
+            <p class="lead">
+                Welcome To Your New Home
+            </p>
+            <a href="/apartments" class="btn btn-white rounded">View Listings</a>
+        </div>
+    </div>
+    
+    <div class="container mt-5 mb-5">
+        <div class="row text-center">
+            <h1 class="display-5">Our Thriving Community</h1>
+            <p class="lead mb-3 text-success">
+                Visit any or all of our forums to see what we are up too.
+            </p>
+            <div class="col-md mb-3">
+                <% for(var i = 0; i < reviews.length; i++){ %>
+                <div class="card p-3 hover-zoom">
+                    <h3>Reviews</h3>
+                    <a href="/reviews">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBSXL4Jxu7uMp0nqbuTOyU2ZkZp6_mCxmnpH9inOlKuFaNfE4uUOZqfIO5dT2z6E287JQ&usqp=CAU" 
+                            class="img-fluid shadow-2-strong rounded" 
+                            alt="reviews">
+                    </a>
+                </div>
+                <% } %>
+            </div>
+            <div class="col-md mb-3">
+                <% for(var i = 0; i < apartments.length; i++){ %>
+                    <div class="card p-3 hover-zoom">
+                        <h3>Listing</h3>
+                        <a href="/apartment/<%= apartments[i]._id %>">
+                            <img src="<%= apartments[i].image %>" 
+                                class="img-fluid shadow-2-strong rounded" 
+                                alt="reviews">
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+            <div class="col-md mb-3 hover-zoom">
+                <% for(var i = 0; i < apartments.length; i++){ %>
+                    <div class="card p-3">
+                        <h3>Yard Sales</h3>
+                        <a href="/product/<%= products[i]._id %>">
+                            <img src="<%= products[i].image %>" 
+                                class="img-fluid shadow-2-strong rounded" 
+                                alt="yard-sales">
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-md p-3 mb-3">
+                <h2 class="display-6">Staff Communication</h2>
+                <p class="lead">
+                    Come by between office hours of 9am to 5pm
+                    and meet our staff.
+                </p>
+                <a href="mailto:#!" class="btn btn-outline-primary">Message Us</a>
+            </div>
+            <div class="col-md p-3 mb-3">
+                <img src="https://cdngeneral.rentcafe.com/dmslivecafe/3/183489/Management-Office-san-antonio-apartments.jpg?crop=(0,0,300,160)&cropxunits=300&cropyunits=171&quality=85&scale=both&" 
+                    class="img-fluid shadow-2-strong rounded"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/footer') %>
+</body>
+<%- include('layouts/scripts') %>
+</html>
